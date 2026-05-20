@@ -554,8 +554,9 @@ body{
 
 /* ============= FLOATING THEME GEAR (right side) ============= */
 .theme-fab {
-  position: fixed; right: 22px;
-  top:70px;
+  position: fixed;
+  right: 10px;
+  top:100px;
   /* transform: translateY(-50%); */
   z-index: 60; display: flex; align-items: center; gap: 12px; flex-direction: row-reverse;
 }
@@ -572,7 +573,7 @@ body{
 
 .theme-fab__panel {
   background: var(--surface); border: 1px solid var(--line-2);
-  border-radius: 16px; padding: 14px 16px;
+  border-radius: 16px; padding: 2px 2px;
   box-shadow: var(--shadow-card);
   display: flex; flex-direction: column; gap: 10px;
   opacity: 0; pointer-events: none; transform: translateX(12px);
