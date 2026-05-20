@@ -81,7 +81,7 @@
       <div class="container about">
         <div class="about__media reveal">
           <div class="about__img"><img src="/assets/img/portrait1.png" alt="Ghulam Meer Jilani" loading="lazy" /></div>
-          <div class="about__pill"><i class="fa-solid fa-award" /> 5+ years experience</div>
+          <div class="about__pill"><i class="fa-solid fa-award" /> 3+ years experience</div>
         </div>
         <div class="about__content reveal">
           <p class="section-mini">About</p>
@@ -305,35 +305,106 @@ const NAV = [
 ]
 
 const STACK = [
-  { name: 'HTML5', file: 'html5.svg' }, { name: 'CSS3', file: 'css3.svg' }, { name: 'Scss', file: 'scss.svg' },
-  { name: 'Tailwind', file: 'tailwindcss.svg' }, { name: 'JavaScript', file: 'javascript.svg' }, { name: 'jQuery', file: 'jquery.svg' },
-  { name: 'React', file: 'react.svg' }, { name: 'PHP', file: 'php.svg' }, { name: 'MySQL', file: 'mysql.svg' },
-  { name: 'WordPress', file: 'wordpress.svg' }, { name: 'Shopify', file: 'shopify.svg' }, { name: 'GitHub', file: 'github.svg' }, { name: 'Figma', file: 'figma.svg' },
+  { name: 'HTML5', file: 'html5.svg' },
+  { name: 'CSS3', file: 'css3.svg' },
+  { name: 'Scss', file: 'scss.svg' },
+  { name: 'Tailwind', file: 'tailwindcss.svg' },
+  { name: 'JavaScript', file: 'javascript.svg' },
+  { name: 'jQuery', file: 'jquery.svg' },
+  { name: 'React', file: 'react.svg' },
+  { name: 'PHP', file: 'php.svg' },
+  { name: 'MySQL', file: 'mysql.svg' },
+  { name: 'WordPress', file: 'wordpress.svg' },
+  { name: 'Shopify', file: 'shopify.svg' },
+  { name: 'GitHub', file: 'github.svg' },
+  { name: 'Figma', file: 'figma.svg' },
 ]
 const marqueeStack = [...STACK, ...STACK]
 
 const SERVICES = [
-  { icon: 'fa-brands fa-shopify', title: 'Shopify Development', desc: 'Custom themes, Liquid sections, app integrations, and Shopify 2.0 builds engineered for conversion.' },
-  { icon: 'fa-brands fa-wordpress', title: 'WordPress Builds', desc: 'Custom themes, Elementor, ACF, WooCommerce — fast, secure and SEO-ready websites.' },
-  { icon: 'fa-solid fa-bolt', title: 'Speed & Performance', desc: 'Core Web Vitals optimisation, lazy loading, image pipelines, and lighthouse-perfect scores.' },
-  { icon: 'fa-solid fa-pen-ruler', title: 'Figma → Code', desc: 'Pixel-perfect responsive front-end from Figma, XD or Sketch — across desktop, tablet and mobile.' },
-  { icon: 'fa-solid fa-cart-shopping', title: 'DTC eCommerce', desc: 'Landing pages, product pages, upsells and storefront experiences proven to lift AOV and conversion.' },
-  { icon: 'fa-solid fa-headset', title: 'Maintenance & Care', desc: 'Monthly retainers for store updates, bug fixes, theme tweaks and ongoing optimisation.' },
+  { 
+    icon: 'fa-brands fa-shopify',
+    title: 'Shopify Development',
+    desc: 'Custom themes, Liquid sections, app integrations, and Shopify 2.0 builds engineered for conversion.'
+  },
+  { 
+    icon: 'fa-brands fa-wordpress',
+    title: 'WordPress Builds',
+    desc: 'Custom themes, Elementor, ACF, WooCommerce — fast, secure and SEO-ready websites.' 
+  },
+  { 
+    icon: 'fa-solid fa-bolt',
+    title: 'Speed & Performance',
+    desc: 'Core Web Vitals optimisation, lazy loading, image pipelines, and lighthouse-perfect scores.' 
+  },
+  { 
+    icon: 'fa-solid fa-pen-ruler',
+    title: 'Figma → Code',
+    desc: 'Pixel-perfect responsive front-end from Figma, XD or Sketch — across desktop, tablet and mobile.' 
+  },
+  { 
+    icon: 'fa-solid fa-cart-shopping',
+    title: 'DTC eCommerce',
+    desc: 'Landing pages, product pages, upsells and storefront experiences proven to lift AOV and conversion.' 
+  
+  },
+  { 
+    icon: 'fa-solid fa-headset',
+    title: 'Maintenance & Care',
+    desc: 'Monthly retainers for store updates, bug fixes, theme tweaks and ongoing optimisation.' 
+  },
 ]
 
 const PROJECTS = [
-  { title: 'Sports Refuel', sub: 'Shopify · Supplements', img: 'project-supplements.jpg', platform: 'shopify', niche: 'supplements' },
-  { title: 'Centime Gift', sub: 'Shopify · Gifting', img: 'project-jewelry.jpg', platform: 'shopify', niche: 'jewelry' },
-  { title: 'Amanda Perry', sub: 'Shopify · Lifestyle', img: 'project-clothing.jpg', platform: 'shopify', niche: 'clothing' },
-  { title: 'Lumière Jewelry', sub: 'Shopify · Jewelry', img: 'project-jewelry.jpg', platform: 'shopify', niche: 'jewelry' },
-  { title: 'Vital Supplements', sub: 'Shopify · Supplements', img: 'project-supplements.jpg', platform: 'shopify', niche: 'supplements' },
-  { title: 'Fold Apparel', sub: 'Shopify · Clothing', img: 'project-clothing.jpg', platform: 'shopify', niche: 'clothing' },
-  { title: 'Beade Agency', sub: 'WordPress · Agency', img: 'project-wp-agency.jpg', platform: 'wordpress', niche: 'agency' },
-  { title: 'Lavelin Skincare', sub: 'WordPress · Skincare', img: 'project-skincare.jpg', platform: 'wordpress', niche: 'skincare' },
-  { title: 'Aurea Atelier', sub: 'Shopify · Jewelry', img: 'project-jewelry.jpg', platform: 'shopify', niche: 'jewelry' },
-  { title: 'Northwind WP', sub: 'WordPress · Agency', img: 'project-wp-agency.jpg', platform: 'wordpress', niche: 'agency' },
-  { title: 'Botanic Glow', sub: 'WordPress · Skincare', img: 'project-skincare.jpg', platform: 'wordpress', niche: 'skincare' },
-  { title: 'Pure Form', sub: 'Shopify · Clothing', img: 'project-clothing.jpg', platform: 'shopify', niche: 'clothing' },
+  { 
+    title: 'Sports Refuel',
+    sub: 'Shopify · Supplements',
+    img: 'project-supplements.jpg',
+    platform: 'shopify',
+    niche: 'supplements'
+  },
+  { 
+    title: 'Vital Supplements',
+    sub: 'Shopify · Supplements',
+    img: 'project-supplements.jpg',
+    platform: 'shopify',
+    niche: 'supplements'
+  },
+  { 
+    title: 'Centime Gift',
+    sub: 'Shopify · Gifting',
+    img: 'project-jewelry.jpg',
+    platform: 'shopify',
+    niche: 'jewelry'
+  },
+  { 
+    title: 'Lumière Jewelry',
+    sub: 'Shopify · Jewelry',
+    img: 'project-jewelry.jpg',
+    platform: 'shopify',
+    niche: 'jewelry'
+  },
+  { 
+    title: 'Amanda Perry',
+    sub: 'Shopify · Lifestyle',
+    img: 'project-clothing.jpg',
+    platform: 'shopify',
+    niche: 'clothing'
+  },
+  { 
+    title: 'Fold Apparel',
+    sub: 'Shopify · Clothing',
+    img: 'project-clothing.jpg',
+    platform: 'shopify',
+    niche: 'clothing'
+  },
+  { 
+    title: 'Beade Agency',
+    sub: 'WordPress · Agency',
+    img: 'project-wp-agency.jpg',
+    platform: 'wordpress',
+    niche: 'agency'
+  },
 ]
 
 const EXPERIENCE = [
