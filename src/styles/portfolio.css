@@ -561,7 +561,9 @@ body{
   z-index: 60; display: flex; align-items: center; gap: 12px; flex-direction: row-reverse;
 }
 .theme-fab__toggle {
-  width: 48px; height: 48px; border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
   background: linear-gradient(135deg, var(--gold), var(--gold-2));
   color: var(--on-gold); display: grid; place-items: center;
   box-shadow: var(--shadow-gold); border: 0; cursor: pointer;

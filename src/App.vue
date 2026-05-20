@@ -5,7 +5,8 @@
       <div class="container nav__inner">
         <a href="#home" class="logo">meer<span>.</span>jilani</a>
         <nav class="nav__links">
-          <a v-for="item in NAV" :key="item.id" :href="`#${item.id}`" :class="{ 'is-active': activeSection === item.id }">{{ item.label }}</a>
+          <a v-for="item in NAV" :key="item.id" :href="`#${item.id}`"
+            :class="{ 'is-active': activeSection === item.id }">{{ item.label }}</a>
         </nav>
         <a href="#contact" class="btn btn--gold btn--sm nav__cta-desktop">Hire Me</a>
         <button class="nav__toggle" aria-label="Open menu" @click="drawerOpen = true">
@@ -15,19 +16,23 @@
     </header>
 
     <!-- DRAWER -->
-    <div class="drawer-overlay" :class="{ 'is-open': drawerOpen }" @click="drawerOpen = false" :aria-hidden="!drawerOpen" />
+    <div class="drawer-overlay" :class="{ 'is-open': drawerOpen }" @click="drawerOpen = false"
+      :aria-hidden="!drawerOpen" />
     <aside class="drawer" :class="{ 'is-open': drawerOpen }" :aria-hidden="!drawerOpen">
       <div class="drawer__head">
         <a href="#home" class="logo" @click="drawerOpen = false">meer<span>.</span>jilani</a>
-        <button class="drawer__close" aria-label="Close menu" @click="drawerOpen = false"><i class="fa-solid fa-xmark" /></button>
+        <button class="drawer__close" aria-label="Close menu" @click="drawerOpen = false"><i
+            class="fa-solid fa-xmark" /></button>
       </div>
       <nav class="drawer__nav">
-        <a v-for="item in NAV" :key="item.id" :href="`#${item.id}`" @click="drawerOpen = false" :class="{ 'is-active': activeSection === item.id }">
+        <a v-for="item in NAV" :key="item.id" :href="`#${item.id}`" @click="drawerOpen = false"
+          :class="{ 'is-active': activeSection === item.id }">
           <i :class="`fa-solid ${item.icon}`" />{{ item.label }}
         </a>
       </nav>
       <div class="drawer__foot">
-        <a href="#contact" class="btn btn--gold" @click="drawerOpen = false">Hire Me <i class="fa-solid fa-arrow-right" /></a>
+        <a href="#contact" class="btn btn--gold" @click="drawerOpen = false">Hire Me <i
+            class="fa-solid fa-arrow-right" /></a>
         <div class="drawer__socials">
           <a href="#" aria-label="GitHub"><i class="fa-brands fa-github" /></a>
           <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" /></a>
@@ -44,7 +49,8 @@
         <div class="hero__content reveal">
           <span class="eyebrow"><i class="fa-solid fa-circle-dot" /> Available for new projects</span>
           <h1>Crafting <em>premium</em> Shopify &amp; WordPress experiences for ambitious brands.</h1>
-          <p>Shopify, WordPress &amp; Frontend Developer with 3+ years building fast, conversion-focused stores for DTC and lifestyle brands worldwide.</p>
+          <p>Shopify, WordPress &amp; Frontend Developer with 3+ years building fast, conversion-focused stores for DTC
+            and lifestyle brands worldwide.</p>
           <div class="hero__cta">
             <a href="#portfolio" class="btn btn--gold">View Work <i class="fa-solid fa-arrow-right" /></a>
             <a href="#contact" class="btn btn--ghost">Start a Project</a>
@@ -66,7 +72,9 @@
 
     <!-- MARQUEE -->
     <section class="marquee">
-      <div class="container"><p class="section-mini">Tools &amp; Stack</p></div>
+      <div class="container">
+        <p class="section-mini">Tools &amp; Stack</p>
+      </div>
       <div class="marquee__track">
         <div class="marquee__row">
           <div v-for="(t, i) in marqueeStack" :key="i" class="marquee__item">
@@ -86,7 +94,9 @@
         <div class="about__content reveal">
           <p class="section-mini">About</p>
           <h2>I build stores that <em>sell</em>—not just sites that look nice.</h2>
-          <p>I'm Ghulam Meer Jilani — a Shopify, WordPress &amp; Frontend Developer with 3+ years of hands-on experience building conversion-focused eCommerce stores and custom web interfaces. Currently with Kineteck in Faisalabad, previously two and a half years at Blinix Solutions.</p>
+          <p>I'm Ghulam Meer Jilani — a Shopify, WordPress &amp; Frontend Developer with 3+ years of hands-on experience
+            building conversion-focused eCommerce stores and custom web interfaces. Currently with Kineteck in
+            Faisalabad, previously two and a half years at Blinix Solutions.</p>
           <ul class="about__list">
             <li><i class="fa-solid fa-check" /> Shopify Liquid &amp; custom 2.0 sections</li>
             <li><i class="fa-solid fa-check" /> WordPress, Elementor &amp; theme customisation</li>
@@ -95,7 +105,8 @@
           </ul>
           <div class="about__cta">
             <a href="#contact" class="btn btn--gold">Let's talk <i class="fa-solid fa-arrow-right" /></a>
-            <a href="/MEER-CV-2026.pdf" download class="btn btn--ghost"><i class="fa-solid fa-download" /> Download CV</a>
+            <a href="/MEER-CV-2026.pdf" download class="btn btn--ghost"><i class="fa-solid fa-download" /> Download
+              CV</a>
           </div>
         </div>
       </div>
@@ -104,10 +115,15 @@
     <!-- SERVICES -->
     <section class="section section--alt" id="services">
       <div class="container">
-        <div class="section-head reveal"><p class="section-mini">Services</p><h2>What I do <em>best</em>.</h2></div>
+        <div class="section-head reveal">
+          <p class="section-mini">Services</p>
+          <h2>What I do <em>best</em>.</h2>
+        </div>
         <div class="grid grid-3">
           <div v-for="s in SERVICES" :key="s.title" class="card reveal">
-            <i :class="`${s.icon} card__icon`" /><h3>{{ s.title }}</h3><p>{{ s.desc }}</p>
+            <i :class="`${s.icon} card__icon`" />
+            <h3>{{ s.title }}</h3>
+            <p>{{ s.desc }}</p>
           </div>
         </div>
       </div>
@@ -116,7 +132,10 @@
     <!-- PORTFOLIO -->
     <section class="section" id="portfolio">
       <div class="container">
-        <div class="section-head reveal"><p class="section-mini">Selected Work</p><h2>Real builds. <em>Real results.</em></h2></div>
+        <div class="section-head reveal">
+          <p class="section-mini">Selected Work</p>
+          <h2>Real builds. <em>Real results.</em></h2>
+        </div>
         <div class="filters reveal">
           <div class="filters__group">
             <label class="filters__label" for="platformSelect">Platform</label>
@@ -150,12 +169,15 @@
               <div class="mockup__bar"><span /><span /><span /></div>
               <div class="mockup__screen"><img :src="`/assets/img/${p.img}`" :alt="p.title" loading="lazy" /></div>
             </div>
-            <div class="project__meta"><h3>{{ p.title }}</h3><span>{{ p.sub }}</span></div>
+            <div class="project__meta">
+              <h3>{{ p.title }}</h3><span>{{ p.sub }}</span>
+            </div>
           </article>
         </div>
         <p v-if="filteredProjects.length === 0" class="empty">No projects in this filter — yet.</p>
         <div v-if="visibleCount < filteredProjects.length" class="loadmore-wrap">
-          <button type="button" class="btn btn--ghost" @click="visibleCount += 6">Load more <i class="fa-solid fa-plus" /></button>
+          <button type="button" class="btn btn--ghost" @click="visibleCount += 6">Load more <i
+              class="fa-solid fa-plus" /></button>
         </div>
       </div>
     </section>
@@ -166,7 +188,8 @@
         <div class="section-head reveal">
           <p class="section-mini section-mini--gold">Journey</p>
           <h2>Experience <em>&amp;</em> Education.</h2>
-          <p class="section-sub">3+ years shipping for global brands, backed by professional certification and continuous learning.</p>
+          <p class="section-sub">3+ years shipping for global brands, backed by professional certification and
+            continuous learning.</p>
         </div>
         <div class="exp-wrap">
           <div class="exp-cols">
@@ -174,7 +197,8 @@
               <h3 class="exp-col__head"><i class="fa-solid fa-briefcase" /> Experience</h3>
               <div v-for="item in EXPERIENCE" :key="item.role" class="tl-item reveal">
                 <div class="tl-card">
-                  <div class="tl-head"><span class="tl-period">{{ item.period }}</span><span class="tl-tag">{{ item.tag }}</span></div>
+                  <div class="tl-head"><span class="tl-period">{{ item.period }}</span><span class="tl-tag">{{ item.tag
+                      }}</span></div>
                   <h3>{{ item.role }}</h3>
                   <p class="tl-company">{{ item.company }}</p>
                   <p>{{ item.desc }}</p>
@@ -188,7 +212,8 @@
               <h3 class="exp-col__head"><i class="fa-solid fa-graduation-cap" /> Education</h3>
               <div v-for="item in EDUCATION" :key="item.role" class="tl-item reveal">
                 <div class="tl-card">
-                  <div class="tl-head"><span class="tl-period">{{ item.period }}</span><span class="tl-tag">{{ item.tag }}</span></div>
+                  <div class="tl-head"><span class="tl-period">{{ item.period }}</span><span class="tl-tag">{{ item.tag
+                      }}</span></div>
                   <h3>{{ item.role }}</h3>
                   <p class="tl-company">{{ item.company }}</p>
                   <p>{{ item.desc }}</p>
@@ -206,7 +231,10 @@
     <!-- REVIEWS -->
     <section class="section" id="reviews">
       <div class="container">
-        <div class="section-head reveal"><p class="section-mini">Client Love</p><h2>What founders <em>say</em>.</h2></div>
+        <div class="section-head reveal">
+          <p class="section-mini">Client Love</p>
+          <h2>What founders <em>say</em>.</h2>
+        </div>
         <div class="reviews reveal">
           <div class="reviews__viewport">
             <div class="reviews__track" :style="trackStyle">
@@ -215,15 +243,21 @@
                 <p class="review__text">"{{ r.text }}"</p>
                 <div class="review__author">
                   <div class="review__avatar">{{ r.initials }}</div>
-                  <div><div class="review__name">{{ r.name }}</div><div class="review__role">{{ r.role }}</div></div>
+                  <div>
+                    <div class="review__name">{{ r.name }}</div>
+                    <div class="review__role">{{ r.role }}</div>
+                  </div>
                 </div>
               </article>
             </div>
           </div>
           <div class="reviews__controls">
-            <button aria-label="Previous" @click="reviewIndex = Math.max(0, reviewIndex - 1)" :disabled="reviewIndex === 0"><i class="fa-solid fa-arrow-left" /></button>
-            <div class="reviews__dots"><span v-for="n in maxIndex + 1" :key="n" :class="{ 'is-active': n - 1 === reviewIndex }" /></div>
-            <button aria-label="Next" @click="reviewIndex = Math.min(maxIndex, reviewIndex + 1)" :disabled="reviewIndex >= maxIndex"><i class="fa-solid fa-arrow-right" /></button>
+            <button aria-label="Previous" @click="reviewIndex = Math.max(0, reviewIndex - 1)"
+              :disabled="reviewIndex === 0"><i class="fa-solid fa-arrow-left" /></button>
+            <div class="reviews__dots"><span v-for="n in maxIndex + 1" :key="n"
+                :class="{ 'is-active': n - 1 === reviewIndex }" /></div>
+            <button aria-label="Next" @click="reviewIndex = Math.min(maxIndex, reviewIndex + 1)"
+              :disabled="reviewIndex >= maxIndex"><i class="fa-solid fa-arrow-right" /></button>
           </div>
         </div>
       </div>
@@ -235,7 +269,8 @@
         <div class="contact__intro reveal">
           <p class="section-mini">Contact</p>
           <h2>Let's build something <em>worth shipping</em>.</h2>
-          <p>Have a Shopify migration, a WordPress rebuild, or a landing page that needs to convert? Drop a note — I reply within 24 hours.</p>
+          <p>Have a Shopify migration, a WordPress rebuild, or a landing page that needs to convert? Drop a note — I
+            reply within 24 hours.</p>
           <ul class="contact__info">
             <li><i class="fa-solid fa-envelope" /><span>ghulammeerjilani@gmail.com</span></li>
             <li><i class="fa-solid fa-location-dot" /><span>Faisalabad, Pakistan · Remote worldwide</span></li>
@@ -244,8 +279,10 @@
         </div>
         <form class="contact__form reveal" @submit.prevent="handleSubmit" novalidate>
           <div class="row">
-            <div class="field"><label for="name">Name</label><input id="name" v-model="form.name" type="text" maxlength="100" required /></div>
-            <div class="field"><label for="email">Email</label><input id="email" v-model="form.email" type="email" maxlength="255" required /></div>
+            <div class="field"><label for="name">Name</label><input id="name" v-model="form.name" type="text"
+                maxlength="100" required /></div>
+            <div class="field"><label for="email">Email</label><input id="email" v-model="form.email" type="email"
+                maxlength="255" required /></div>
           </div>
           <div class="row">
             <div class="field"><label for="service">Service Needed *</label>
@@ -254,10 +291,13 @@
                 <option v-for="s in SERVICE_OPTIONS" :key="s" :value="s">{{ s }}</option>
               </select>
             </div>
-            <div class="field"><label for="subject">Subject</label><input id="subject" v-model="form.subject" type="text" maxlength="150" /></div>
+            <div class="field"><label for="subject">Subject</label><input id="subject" v-model="form.subject"
+                type="text" maxlength="150" /></div>
           </div>
-          <div class="field"><label for="message">Project details</label><textarea id="message" v-model="form.message" rows="6" maxlength="2000" required /></div>
-          <button type="submit" class="btn btn--gold btn--block">Send Message <i class="fa-solid fa-paper-plane" /></button>
+          <div class="field"><label for="message">Project details</label><textarea id="message" v-model="form.message"
+              rows="6" maxlength="2000" required /></div>
+          <button type="submit" class="btn btn--gold btn--block">Send Message <i
+              class="fa-solid fa-paper-plane" /></button>
           <p class="form-msg" :class="formMsg.kind ? `is-${formMsg.kind}` : ''">{{ formMsg.text }}</p>
         </form>
       </div>
@@ -268,27 +308,50 @@
       <div class="container footer__top">
         <div class="footer__brand">
           <a href="#home" class="logo">meer<span>.</span>jilani</a>
-          <p>Shopify, WordPress &amp; Frontend Developer crafting fast, conversion-focused experiences for ambitious brands worldwide.</p>
+          <p>Shopify, WordPress &amp; Frontend Developer crafting fast, conversion-focused experiences for ambitious
+            brands worldwide.</p>
         </div>
-        <div class="footer__col"><h4>Navigate</h4><ul><li v-for="n in NAV" :key="n.id"><a :href="`#${n.id}`">{{ n.label }}</a></li></ul></div>
-        <div class="footer__col"><h4>Services</h4><ul><li><a href="#services">Shopify Development</a></li><li><a href="#services">WordPress Builds</a></li><li><a href="#services">Figma to Code</a></li></ul></div>
-        <div class="footer__col footer__contact"><h4>Get in touch</h4><p><i class="fa-solid fa-envelope" /><span>ghulammeerjilani@gmail.com</span></p><a href="#contact" class="btn btn--gold btn--sm">Start a Project</a></div>
+        <div class="footer__col">
+          <h4>Navigate</h4>
+          <ul>
+            <li v-for="n in NAV" :key="n.id"><a :href="`#${n.id}`">{{ n.label }}</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Shopify Development</a></li>
+            <li><a href="#services">WordPress Builds</a></li>
+            <li><a href="#services">Figma to Code</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__contact">
+          <h4>Get in touch</h4>
+          <p><i class="fa-solid fa-envelope" /><span>ghulammeerjilani@gmail.com</span></p><a href="#contact"
+            class="btn btn--gold btn--sm">Start a Project</a>
+        </div>
       </div>
-      <div class="footer__bottom container"><p>© {{ year }} Ghulam Meer Jilani. All rights reserved.</p><p>Designed &amp; built with intent.</p></div>
+      <div class="footer__bottom container">
+        <p>© {{ year }} Ghulam Meer Jilani. All rights reserved.</p>
+        <p>Designed &amp; built with intent.</p>
+      </div>
     </footer>
 
     <!-- Floating theme gear -->
     <div class="theme-fab" :class="{ 'is-open': themeOpen }">
-      <button type="button" class="theme-fab__toggle" aria-label="Change theme" @click="themeOpen = !themeOpen"><i class="fa-solid fa-gear" /></button>
+      <button type="button" class="theme-fab__toggle" aria-label="Change theme" @click="themeOpen = !themeOpen"><i
+          class="fa-solid fa-gear" /></button>
       <div class="theme-fab__panel">
         <!-- <p class="theme-fab__title">Theme</p> -->
         <div class="theme-switch" role="group" aria-label="Theme">
-          <button v-for="t in THEMES" :key="t.id" type="button" :data-theme="t.id" :class="{ 'is-active': theme === t.id }" :title="t.label" @click="theme = t.id" />
+          <button v-for="t in THEMES" :key="t.id" type="button" :data-theme="t.id"
+            :class="{ 'is-active': theme === t.id }" :title="t.label" @click="theme = t.id" />
         </div>
       </div>
     </div>
 
-    <button class="to-top" :class="{ 'is-visible': showTop }" @click="scrollTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up" /></button>
+    <button class="to-top" :class="{ 'is-visible': showTop }" @click="scrollTop" aria-label="Back to top"><i
+        class="fa-solid fa-arrow-up" /></button>
   </div>
 </template>
 
@@ -322,83 +385,83 @@ const STACK = [
 const marqueeStack = [...STACK, ...STACK]
 
 const SERVICES = [
-  { 
+  {
     icon: 'fa-brands fa-shopify',
     title: 'Shopify Development',
     desc: 'Custom themes, Liquid sections, app integrations, and Shopify 2.0 builds engineered for conversion.'
   },
-  { 
+  {
     icon: 'fa-brands fa-wordpress',
     title: 'WordPress Builds',
-    desc: 'Custom themes, Elementor, ACF, WooCommerce — fast, secure and SEO-ready websites.' 
+    desc: 'Custom themes, Elementor, ACF, WooCommerce — fast, secure and SEO-ready websites.'
   },
-  { 
+  {
     icon: 'fa-solid fa-bolt',
     title: 'Speed & Performance',
-    desc: 'Core Web Vitals optimisation, lazy loading, image pipelines, and lighthouse-perfect scores.' 
+    desc: 'Core Web Vitals optimisation, lazy loading, image pipelines, and lighthouse-perfect scores.'
   },
-  { 
+  {
     icon: 'fa-solid fa-pen-ruler',
     title: 'Figma → Code',
-    desc: 'Pixel-perfect responsive front-end from Figma, XD or Sketch — across desktop, tablet and mobile.' 
+    desc: 'Pixel-perfect responsive front-end from Figma, XD or Sketch — across desktop, tablet and mobile.'
   },
-  { 
+  {
     icon: 'fa-solid fa-cart-shopping',
     title: 'DTC eCommerce',
-    desc: 'Landing pages, product pages, upsells and storefront experiences proven to lift AOV and conversion.' 
-  
+    desc: 'Landing pages, product pages, upsells and storefront experiences proven to lift AOV and conversion.'
+
   },
-  { 
+  {
     icon: 'fa-solid fa-headset',
     title: 'Maintenance & Care',
-    desc: 'Monthly retainers for store updates, bug fixes, theme tweaks and ongoing optimisation.' 
+    desc: 'Monthly retainers for store updates, bug fixes, theme tweaks and ongoing optimisation.'
   },
 ]
 
 const PROJECTS = [
-  { 
+  {
     title: 'Sports Refuel',
     sub: 'Shopify · Supplements',
     img: 'project-supplements.jpg',
     platform: 'shopify',
     niche: 'supplements'
   },
-  { 
+  {
     title: 'Vital Supplements',
     sub: 'Shopify · Supplements',
     img: 'project-supplements.jpg',
     platform: 'shopify',
     niche: 'supplements'
   },
-  { 
+  {
     title: 'Centime Gift',
     sub: 'Shopify · Gifting',
     img: 'project-jewelry.jpg',
     platform: 'shopify',
     niche: 'jewelry'
   },
-  { 
+  {
     title: 'Lumière Jewelry',
     sub: 'Shopify · Jewelry',
     img: 'project-jewelry.jpg',
     platform: 'shopify',
     niche: 'jewelry'
   },
-  { 
+  {
     title: 'Amanda Perry',
     sub: 'Shopify · Lifestyle',
     img: 'project-clothing.jpg',
     platform: 'shopify',
     niche: 'clothing'
   },
-  { 
+  {
     title: 'Fold Apparel',
     sub: 'Shopify · Clothing',
     img: 'project-clothing.jpg',
     platform: 'shopify',
     niche: 'clothing'
   },
-  { 
+  {
     title: 'Beade Agency',
     sub: 'WordPress · Agency',
     img: 'project-wp-agency.jpg',
@@ -408,30 +471,44 @@ const PROJECTS = [
 ]
 
 const EXPERIENCE = [
-  { period: 'Oct 2025 — Present', tag: 'On-site', role: 'Shopify & Frontend Developer', company: 'Kineteck · Faisalabad, Pakistan',
+  {
+    period: 'Oct 2025 — Present', tag: 'On-site', role: 'Shopify & Frontend Developer', company: 'Kineteck · Faisalabad, Pakistan',
     desc: 'Developing and customizing Shopify themes using Liquid, JavaScript and CSS — building scalable, reusable storefront components for international brands.',
-    bullets: ['Develop and customize Shopify themes using Liquid, JavaScript and CSS', 'Build reusable sections and dynamic components for scalable store management', 'Collaborate with team on UI/UX improvements and feature implementation'] },
-  { period: 'May 2023 — Oct 2025', tag: 'Full-time', role: 'Shopify & WordPress / Frontend Developer', company: 'Blinix Solutions (Pvt) Ltd. · Faisalabad, Pakistan',
+    bullets: ['Develop and customize Shopify themes using Liquid, JavaScript and CSS', 'Build reusable sections and dynamic components for scalable store management', 'Collaborate with team on UI/UX improvements and feature implementation']
+  },
+  {
+    period: 'May 2023 — Oct 2025', tag: 'Full-time', role: 'Shopify & WordPress / Frontend Developer', company: 'Blinix Solutions (Pvt) Ltd. · Faisalabad, Pakistan',
     desc: 'Delivered Shopify stores and WordPress websites for international clients — focused on responsive UI, performance and ongoing feature enhancements.',
-    bullets: ['Customized Shopify stores and WordPress websites based on client requirements', 'Developed responsive UI components and optimized frontend performance', 'Worked on bug fixing, UI improvements and feature enhancements'] },
-  { period: '2021 — 2022', tag: 'Internship', role: 'Web Development Trainee & Intern', company: 'Web Dexterity Training Institute',
+    bullets: ['Customized Shopify stores and WordPress websites based on client requirements', 'Developed responsive UI components and optimized frontend performance', 'Worked on bug fixing, UI improvements and feature enhancements']
+  },
+  {
+    period: '2021 — 2022', tag: 'Internship', role: 'Web Development Trainee & Intern', company: 'Web Dexterity Training Institute',
     desc: 'Completed an intensive web development program followed by a hands-on internship building responsive sites with HTML, CSS, JavaScript and WordPress.',
-    bullets: ['Hands-on training in HTML, CSS, SCSS, JavaScript & jQuery', 'Built WordPress & Elementor projects under senior mentorship'] },
+    bullets: ['Hands-on training in HTML, CSS, SCSS, JavaScript & jQuery', 'Built WordPress & Elementor projects under senior mentorship']
+  },
 ]
 
 const EDUCATION = [
-  { period: '2021 — 2022', tag: 'Certification', role: 'Web Development Certification + Internship', company: 'Web Dexterity Training Institute',
+  {
+    period: '2021 — 2022', tag: 'Certification', role: 'Web Development Certification + Internship', company: 'Web Dexterity Training Institute',
     desc: 'Professional web development certification covering modern frontend stack, responsive design and CMS development — followed by a hands-on internship.',
-    bullets: ['Frontend stack: HTML, CSS, SCSS, JS, jQuery', 'WordPress & Elementor project work'] },
-  { period: '2012 — 2014', tag: "Bachelor's", role: "Bachelor's Degree", company: 'University of the Punjab',
+    bullets: ['Frontend stack: HTML, CSS, SCSS, JS, jQuery', 'WordPress & Elementor project work']
+  },
+  {
+    period: '2012 — 2014', tag: "Bachelor's", role: "Bachelor's Degree", company: 'University of the Punjab',
     desc: "Bachelor's degree from the University of the Punjab, building a strong analytical and academic foundation alongside self-directed web development learning.",
-    bullets: ['University of the Punjab graduate', 'Self-taught web development alongside studies'] },
-  { period: '2009 — 2011', tag: 'Intermediate', role: 'Intermediate (FSc)', company: 'BISE Faisalabad',
+    bullets: ['University of the Punjab graduate', 'Self-taught web development alongside studies']
+  },
+  {
+    period: '2009 — 2011', tag: 'Intermediate', role: 'Intermediate (FSc)', company: 'BISE Faisalabad',
     desc: 'Intermediate education from the Board of Intermediate & Secondary Education, Faisalabad — laying the groundwork for higher studies.',
-    bullets: ['BISE Faisalabad — Intermediate', 'Foundation in mathematics & science'] },
-  { period: '2007 — 2009', tag: 'Matric', role: 'Matric (Science)', company: 'BISE Faisalabad',
+    bullets: ['BISE Faisalabad — Intermediate', 'Foundation in mathematics & science']
+  },
+  {
+    period: '2007 — 2009', tag: 'Matric', role: 'Matric (Science)', company: 'BISE Faisalabad',
     desc: 'Secondary School Certificate with Science from BISE Faisalabad — early exposure to computing sparked an interest in web technologies.',
-    bullets: ['BISE Faisalabad — Matric (Science)', 'First exposure to computing & the web'] },
+    bullets: ['BISE Faisalabad — Matric (Science)', 'First exposure to computing & the web']
+  },
 ]
 
 const REVIEWS = [
@@ -468,9 +545,9 @@ const formMsg = ref({ text: '', kind: '' })
 const year = new Date().getFullYear()
 
 onMounted(() => {
-  try { const s = localStorage.getItem('mj-theme'); if (s && THEMES.some(t => t.id === s)) theme.value = s } catch {}
+  try { const s = localStorage.getItem('mj-theme'); if (s && THEMES.some(t => t.id === s)) theme.value = s } catch { }
 })
-watch(theme, v => { try { localStorage.setItem('mj-theme', v) } catch {} })
+watch(theme, v => { try { localStorage.setItem('mj-theme', v) } catch { } })
 watch([platform, niche], () => { visibleCount.value = 6 })
 
 const filteredProjects = computed(() => PROJECTS.filter(p => (platform.value === 'all' || p.platform === platform.value) && (niche.value === 'all' || p.niche === niche.value)))
