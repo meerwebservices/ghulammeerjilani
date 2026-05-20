@@ -8,6 +8,6 @@
     color:#fff;
 }
 
-.exp-col__head{
-    margin-bottom:10px;
+h3.exp-col__head{
+    margin-bottom:10px !important;
 }
