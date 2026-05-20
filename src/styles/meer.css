@@ -10,4 +10,5 @@
 
 h3.exp-col__head{
     margin-bottom:10px !important;
+    display:inline-block;
 }
