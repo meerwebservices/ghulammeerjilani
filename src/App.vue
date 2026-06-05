@@ -349,8 +349,13 @@
         </div>
         <div class="footer__col footer__contact">
           <h4>Get in touch</h4>
-          <p><i class="fa-solid fa-envelope" /><span>ghulammeerjilani@gmail.com</span></p><a href="#contact"
-            class="btn btn--gold btn--sm">Start a Project</a>
+          <div class="social_icon">
+            <a href="mailto:ghulammeerjilani@gmail.com"> <i class="fa-solid fa-envelope" /></a>
+            <a href="https://www.linkedin.com/in/meeracleweb" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" /></a>
+            <a href="https://www.facebook.com/meeracleweb" aria-label="facebook"><i class="fa-brands fa-facebook-f" /></a>
+            <a href="https://wa.me/+923156055044?text=Hi%20Meer,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" /></a>
+            <a href="https://github.com/meerwebservices" aria-label="GitHub"><i class="fa-brands fa-github" /></a>
+          </div>
         </div>
       </div>
       <div class="footer__bottom container">
@@ -623,34 +628,76 @@ onUnmounted(() => {
   reviewTimer && clearInterval(reviewTimer)
 })
 
-function scrollTop() { window.scrollTo({ top: 0, behavior: 'smooth' }) }
+function scrollTop() {
+   window.scrollTo({ top: 0, behavior: 'smooth' })
+}
 async function handleSubmit() {
   const { name, email, service, subject, message } = form.value
+
   const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-  if (!name.trim() || !validEmail || !service || message.trim().length < 10) {
-    formMsg.value = { text: 'Please fill in all required fields correctly.', kind: 'error' }
+
+  if (!name.trim()) {
+    formMsg.value = { text: 'Name is required.', kind: 'error' }
     return
   }
-  formMsg.value = { text: 'Sending your message…', kind: '' }
+
+  if (!validEmail) {
+    formMsg.value = { text: 'Please enter a valid email address.', kind: 'error' }
+    return
+  }
+
+  if (!service) {
+    formMsg.value = { text: 'Please select a service.', kind: 'error' }
+    return
+  }
+
+  if (message.trim().length < 10) {
+    formMsg.value = { text: 'Message must be at least 10 characters.', kind: 'error' }
+    return
+  }
+
   try {
-    const payload = {
-      name, email, service, message,
-      subject: subject || `New enquiry — ${service}`,
-      _subject: `Portfolio enquiry from ${name} — ${service}`,
-      _template: 'table',
-      _captcha: 'false',
-      _autoresponse: `Hi ${name},\n\nThanks for reaching out! I've received your message regarding "${service}" and will get back to you within 24 hours.\n\nFor reference, here's a copy of what you sent:\n\n${message}\n\nBest regards,\nGhulam Meer Jilani`
-    }
+    formMsg.value = { text: 'Sending...', kind: '' }
+
     const res = await fetch('https://formsubmit.co/ajax/ghulammeerjilani@gmail.com', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify(payload)
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        service,
+        subject,
+        message
+      })
     })
-    if (!res.ok) throw new Error('net')
-    formMsg.value = { text: 'Thanks! Your message was sent. A confirmation has been emailed to you.', kind: 'success' }
-    form.value = { name: '', email: '', service: '', subject: '', message: '' }
-  } catch {
-    formMsg.value = { text: 'Sorry, something went wrong. Please email ghulammeerjilani@gmail.com directly.', kind: 'error' }
+
+    const data = await res.json()
+    console.log(data)
+
+    if (!res.ok) throw new Error(data.message || 'Submission failed')
+
+    formMsg.value = {
+      text: 'Message sent successfully!',
+      kind: 'success'
+    }
+
+    form.value = {
+      name: '',
+      email: '',
+      service: '',
+      subject: '',
+      message: ''
+    }
+  } catch (err) {
+    console.error(err)
+
+    formMsg.value = {
+      text: err.message || 'Something went wrong.',
+      kind: 'error'
+    }
   }
 }
 </script>
