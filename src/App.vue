@@ -56,15 +56,37 @@
             <a href="#contact" class="btn btn--ghost">Start a Project</a>
           </div>
           <div class="hero__stats">
-            <div><strong>70+</strong><span>Projects shipped</span></div>
-            <div><strong>3y</strong><span>Building stores</span></div>
-            <div><strong>20+</strong><span>DTC brands</span></div>
+            <div><strong>3+</strong><span>Years of Experience</span></div>
+            <div><strong>70+</strong><span>Projects Delivered</span></div>
+            <div><strong>100%</strong><span>Quality Work</span></div>
           </div>
         </div>
         <div class="hero__visual reveal">
           <div class="portrait">
-            <img src="/assets/img/portrait.jpeg" alt="Portrait of Ghulam Meer Jilani" loading="lazy" />
-            <div class="portrait__badge"><i class="fa-solid fa-bolt" /> Performance-first</div>
+            <!-- <img src="/assets/img/portrait.jpeg" alt="Portrait of Ghulam Meer Jilani" loading="lazy" /> -->
+             <Swiper
+              :modules="[Autoplay]"
+              :slidesPerView="'auto'"
+              :loop="true"
+              :spaceBetween="0"
+              :autoplay="{
+                delay: 3000,
+                disableOnInteraction: false
+              }"
+              class="hero-swiper"
+            >
+              <SwiperSlide
+                v-for="project in HERO_PROJECTS"
+                :key="project.title"
+                class="hero-slide"
+              >
+                <img
+                  :src="`/assets/img/${project.img}`"
+                  :alt="project.title"
+                />
+              </SwiperSlide>
+            </Swiper>
+            
           </div>
         </div>
       </div>
@@ -72,9 +94,9 @@
 
     <!-- MARQUEE -->
     <section class="marquee">
-      <div class="container">
+      <!-- <div class="container">
         <p class="section-mini">Tools &amp; Stack</p>
-      </div>
+      </div> -->
       <div class="marquee__track">
         <div class="marquee__row">
           <div v-for="(t, i) in marqueeStack" :key="i" class="marquee__item">
@@ -88,7 +110,7 @@
     <section class="section" id="about">
       <div class="container about">
         <div class="about__media reveal">
-          <div class="about__img"><img src="/assets/img/portrait1.png" alt="Ghulam Meer Jilani" loading="lazy" /></div>
+          <div class="about__img"><img src="/assets/img/ghulammeerjilani.jpeg" alt="Ghulam Meer Jilani" loading="lazy" /></div>
           <div class="about__pill"><i class="fa-solid fa-award" /> 3+ years experience</div>
         </div>
         <div class="about__content reveal">
@@ -98,9 +120,9 @@
             building conversion-focused eCommerce stores and custom web interfaces. Currently with Kineteck in
             Faisalabad, previously two and a half years at Blinix Solutions.</p>
           <ul class="about__list">
-            <li><i class="fa-solid fa-check" /> Shopify Liquid &amp; custom 2.0 sections</li>
-            <li><i class="fa-solid fa-check" /> WordPress, Elementor &amp; theme customisation</li>
-            <li><i class="fa-solid fa-check" /> HTML, CSS, SCSS, Tailwind, JS &amp; jQuery</li>
+            <li><i class="fa-solid fa-check" /> Shopify Liquid &amp; Custom 2.0 sections</li>
+            <li><i class="fa-solid fa-check" /> WordPress, Elementor Customization</li>
+            <li><i class="fa-solid fa-check" /> HTML, CSS, SCSS, Tailwind, jQuery</li>
             <li><i class="fa-solid fa-check" /> Figma / XD / PSD → pixel-perfect code</li>
           </ul>
           <div class="about__cta">
@@ -153,11 +175,11 @@
             <div class="select-wrap">
               <select id="nicheSelect" v-model="niche">
                 <option value="all">All categories</option>
-                <option value="jewelry">Jewelry</option>
-                <option value="supplements">Supplements</option>
-                <option value="clothing">Clothing</option>
-                <option value="skincare">Skincare</option>
                 <option value="agency">Agency</option>
+                <option value="clothing">Clothing</option>
+                <option value="jewellery">Jewellery</option>
+                <option value="skincare">Skincare</option>
+                <option value="supplements">Supplements</option>
               </select>
               <i class="fa-solid fa-chevron-down" />
             </div>
@@ -356,7 +378,11 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch, withModifiers } from 'vue'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Autoplay, EffectCoverflow } from 'swiper/modules'
+// import { Autoplay, EffectCreative } from 'swiper/modules'
+import 'swiper/css'
 
 const NAV = [
   { id: 'about', label: 'About', icon: 'fa-user' },
@@ -367,6 +393,19 @@ const NAV = [
   { id: 'contact', label: 'Contact', icon: 'fa-envelope' },
 ]
 
+const HERO_PROJECTS = [
+  { img: '1-hero-jewelery.jpg', title: 'Pottlam jewellery' },
+  { img: '2-hero-Clothing.jpg', title: 'Fashion' },
+  { img: '3-hero-supliment.jpg', title: 'Supliment' },
+  { img: '4-hero-agency.jpg', title: 'Supliment' },
+  { img: '5-hero-travling.jpg', title: 'travling' },
+  { img: '6-hero-tawakkal.jpg', title: 'Tawakkal Fabric' },
+  { img: '7-hero-Skin-care.jpg', title: 'skincare' },
+  { img: '8-hero-walpaper.jpg', title: 'Decoration' },
+  { img: '9-hero-jewlery.jpg', title: 'Centime jewellery' },
+  { img: '10-hero-watch.jpg', title: 'Watches' },
+]
+
 const STACK = [
   { name: 'HTML5', file: 'html5.svg' },
   { name: 'CSS3', file: 'css3.svg' },
@@ -374,7 +413,7 @@ const STACK = [
   { name: 'Tailwind', file: 'tailwindcss.svg' },
   { name: 'JavaScript', file: 'javascript.svg' },
   { name: 'jQuery', file: 'jquery.svg' },
-  { name: 'React', file: 'react.svg' },
+  // { name: 'React', file: 'react.svg' },
   { name: 'PHP', file: 'php.svg' },
   { name: 'MySQL', file: 'mysql.svg' },
   { name: 'WordPress', file: 'wordpress.svg' },
@@ -420,53 +459,46 @@ const SERVICES = [
 
 const PROJECTS = [
   {
-    title: 'Sports Refuel',
-    sub: 'Shopify · Supplements',
-    img: 'project-supplements.jpg',
+    title: 'Pottlam',
+    sub: 'Shopify · jewellery . Freelance',
+    img: 'portfolio-1.jpg',
     platform: 'shopify',
-    niche: 'supplements'
+    niche: 'jewellery'
   },
   {
-    title: 'Vital Supplements',
-    sub: 'Shopify · Supplements',
-    img: 'project-supplements.jpg',
-    platform: 'shopify',
-    niche: 'supplements'
-  },
-  {
-    title: 'Centime Gift',
-    sub: 'Shopify · Gifting',
-    img: 'project-jewelry.jpg',
-    platform: 'shopify',
-    niche: 'jewelry'
-  },
-  {
-    title: 'Lumière Jewelry',
-    sub: 'Shopify · Jewelry',
-    img: 'project-jewelry.jpg',
-    platform: 'shopify',
-    niche: 'jewelry'
-  },
-  {
-    title: 'Amanda Perry',
-    sub: 'Shopify · Lifestyle',
-    img: 'project-clothing.jpg',
+    title: 'Confiaseiter',
+    sub: 'Shopify · Clothing. Freelance',
+    img: 'portfolio-2.jpg',
     platform: 'shopify',
     niche: 'clothing'
   },
   {
-    title: 'Fold Apparel',
-    sub: 'Shopify · Clothing',
-    img: 'project-clothing.jpg',
+    title: 'Supplement',
+    sub: 'Shopify · supplement . Freelance',
+    img: 'portfolio-3.jpg',
+    platform: 'shopify',
+    niche: 'supplements'
+  },
+  {
+    title: 'Tawakkal',
+    sub: 'Shopify · Clothing. Freelance',
+    img: 'portfolio-4.jpg',
     platform: 'shopify',
     niche: 'clothing'
   },
   {
-    title: 'Beade Agency',
-    sub: 'WordPress · Agency',
-    img: 'project-wp-agency.jpg',
+    title: 'Hazzard',
+    sub: 'WordPress · Agency . Novaprotocol',
+    img: 'portfolio-5.png',
     platform: 'wordpress',
     niche: 'agency'
+  },
+  {
+    title: 'Baby Pandas',
+    sub: 'Shopify · Clothing. Freelance',
+    img: 'portfolio-6.png',
+    platform: 'shopify',
+    niche: 'clothing'
   },
 ]
 
