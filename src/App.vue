@@ -351,7 +351,7 @@
           <h4>Get in touch</h4>
           <div class="social_icon">
             <a href="mailto:ghulammeerjilani@gmail.com"> <i class="fa-solid fa-envelope" /></a>
-            <a href="https://www.linkedin.com/in/meeracleweb" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" /></a>
+            <a href="https://www.linkedin.com/in/ghulammeerjilani" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" /></a>
             <a href="https://www.facebook.com/meeracleweb" aria-label="facebook"><i class="fa-brands fa-facebook-f" /></a>
             <a href="https://wa.me/+923156055044?text=Hi%20Meer,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" /></a>
             <a href="https://github.com/meerwebservices" aria-label="GitHub"><i class="fa-brands fa-github" /></a>
