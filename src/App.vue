@@ -400,8 +400,10 @@ const NAV = [
 
 const HERO_PROJECTS = [
   { img: 'belle-clothing.jpg', title: 'Belle Clothing' },
-  { img: '6-hero-tawakkal.jpg', title: 'Tawakkal Fabric' },
+  { img: 'tamir-carpets.jpg', title: 'Tamir Carpets ' },
+  { img: 'Purvena-supliment.jpg', title: 'Purvena Supplements' },
   { img: '5-hero-travling.jpg', title: 'travling' },
+  { img: '6-hero-tawakkal.jpg', title: 'Tawakkal Fabric' },
   { img: '7-hero-Skin-care.jpg', title: 'skincare' },
   { img: '8-hero-walpaper.jpg', title: 'Decoration' },
   { img: '9-hero-jewlery.jpg', title: 'Centime jewellery' },
