@@ -400,16 +400,12 @@ const NAV = [
 
 const HERO_PROJECTS = [
   { img: 'belle-clothing.jpg', title: 'Belle Clothing' },
-  { img: '1-hero-jewelery.jpg', title: 'Pottlam jewellery' },
-  { img: '2-hero-Clothing.jpg', title: 'Fashion' },
-  { img: '3-hero-supliment.jpg', title: 'Supliment' },
-  { img: '4-hero-agency.jpg', title: 'Supliment' },
-  { img: '5-hero-travling.jpg', title: 'travling' },
   { img: '6-hero-tawakkal.jpg', title: 'Tawakkal Fabric' },
+  { img: '5-hero-travling.jpg', title: 'travling' },
   { img: '7-hero-Skin-care.jpg', title: 'skincare' },
   { img: '8-hero-walpaper.jpg', title: 'Decoration' },
   { img: '9-hero-jewlery.jpg', title: 'Centime jewellery' },
-  { img: '10-hero-watch.jpg', title: 'Watches' },
+  { img: '10-hero-watch.jpg', title: 'Timepieces Finder' },
 ]
 
 const STACK = [
