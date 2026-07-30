@@ -399,6 +399,7 @@ const NAV = [
 ]
 
 const HERO_PROJECTS = [
+  { img: 'belle-clothing.jpg', title: 'Belle Clothing' },
   { img: '1-hero-jewelery.jpg', title: 'Pottlam jewellery' },
   { img: '2-hero-Clothing.jpg', title: 'Fashion' },
   { img: '3-hero-supliment.jpg', title: 'Supliment' },
@@ -463,6 +464,13 @@ const SERVICES = [
 ]
 
 const PROJECTS = [
+  {
+    title: 'Belle',
+    sub: 'Shopify · Clothing . Freelance',
+    img: 'belle-home.png',
+    platform: 'shopify',
+    niche: 'clothing'
+  },
   {
     title: 'Pottlam',
     sub: 'Shopify · jewellery . Freelance',
