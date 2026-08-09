@@ -47,7 +47,7 @@
       <div class="hero__bg"><span /><span /></div>
       <div class="container hero__inner">
         <div class="hero__content reveal">
-          <span class="eyebrow"><i class="fa-solid fa-circle-dot" /> Available for new projects</span>
+          <span class="eyebrow"><i class="fa-solid fa-circle-dot" /> Available For New Projects</span>
           <h1>Crafting <em>premium</em> Shopify &amp; WordPress experiences for ambitious brands.</h1>
           <p>Shopify, WordPress &amp; Frontend Developer with 3+ years building fast, conversion-focused stores for DTC
             and lifestyle brands worldwide.</p>
@@ -115,14 +115,16 @@
         </div>
         <div class="about__content reveal">
           <p class="section-mini">About</p>
-          <h2>I build stores that <em>sell</em>—not just sites that look nice.</h2>
-          <p>I'm Ghulam Meer Jilani — a Shopify, WordPress &amp; Frontend Developer with 3+ years of hands-on experience
-            building conversion-focused eCommerce stores and custom web interfaces. Currently with Kineteck in
-            Faisalabad, previously two and a half years at Blinix Solutions.</p>
+          <h2>I build stores that sell not just sites that look nice.</h2>
+          <p>
+            I’m Ghulam Meer Jilani, a Shopify, WordPress & Frontend Developer focused on building high-performing, conversion-focused eCommerce stores and custom web experiences.
+
+            With 3+ years of hands-on experience, I help brands turn ideas and designs into fast, responsive, and user-friendly websites that look great and are built to perform.
+          </p>
           <ul class="about__list">
             <li><i class="fa-solid fa-check" /> Shopify Liquid &amp; Custom 2.0 sections</li>
             <li><i class="fa-solid fa-check" /> WordPress, Elementor Customization</li>
-            <li><i class="fa-solid fa-check" /> HTML, CSS, SCSS, Tailwind, jQuery</li>
+            <li><i class="fa-solid fa-check" /> HTML, CSS, SCSS, JavaScript</li>
             <li><i class="fa-solid fa-check" /> Figma / XD / PSD → pixel-perfect code</li>
           </ul>
           <div class="about__cta">
@@ -515,7 +517,7 @@ const PROJECTS = [
 
 const EXPERIENCE = [
   {
-    period: 'Oct 2025 — Present', tag: 'On-site', role: 'Shopify & Frontend Developer', company: 'Kineteck · Faisalabad, Pakistan',
+    period: 'Oct 2025 — May 2026', tag: 'On-site', role: 'Shopify & Frontend Developer', company: 'Kineteck · Faisalabad, Pakistan',
     desc: 'Developing and customizing Shopify themes using Liquid, JavaScript and CSS — building scalable, reusable storefront components for international brands.',
     bullets: ['Develop and customize Shopify themes using Liquid, JavaScript and CSS', 'Build reusable sections and dynamic components for scalable store management', 'Collaborate with team on UI/UX improvements and feature implementation']
   },
@@ -538,12 +540,7 @@ const EDUCATION = [
     bullets: ['Frontend stack: HTML, CSS, SCSS, JS, jQuery', 'WordPress & Elementor project work']
   },
   {
-    period: '2012 — 2014', tag: "Bachelor's", role: "Bachelor's Degree", company: 'University of the Punjab',
-    desc: "Bachelor's degree from the University of the Punjab, building a strong analytical and academic foundation alongside self-directed web development learning.",
-    bullets: ['University of the Punjab graduate', 'Self-taught web development alongside studies']
-  },
-  {
-    period: '2009 — 2011', tag: 'Intermediate', role: 'Intermediate (FSc)', company: 'BISE Faisalabad',
+    period: '2009 — 2011', tag: 'Intermediate', role: 'Intermediate ', company: 'BISE Faisalabad',
     desc: 'Intermediate education from the Board of Intermediate & Secondary Education, Faisalabad — laying the groundwork for higher studies.',
     bullets: ['BISE Faisalabad — Intermediate', 'Foundation in mathematics & science']
   },
