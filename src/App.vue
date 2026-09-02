@@ -129,7 +129,7 @@
           </ul>
           <div class="about__cta">
             <a href="#contact" class="btn btn--gold">Let's talk <i class="fa-solid fa-arrow-right" /></a>
-            <a href="/MEER-CV-2026.pdf" download class="btn btn--ghost"><i class="fa-solid fa-download" /> Download
+            <a href="/Meer-Sep-2026.pdf" download class="btn btn--ghost"><i class="fa-solid fa-download" /> Download
               CV</a>
           </div>
         </div>
