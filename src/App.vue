@@ -49,7 +49,7 @@
         <div class="hero__content reveal">
           <span class="eyebrow"><i class="fa-solid fa-circle-dot" /> Available For New Projects</span>
           <h1>Crafting <em>premium</em> Shopify &amp; WordPress experiences for ambitious brands.</h1>
-          <p>Shopify, WordPress &amp; Frontend Developer with 3+ years building fast, conversion-focused stores for DTC
+          <p>Shopify, WordPress &amp; Frontend Developer with 4+ years building fast, conversion-focused stores for DTC
             and lifestyle brands worldwide.</p>
           <div class="hero__cta">
             <a href="#portfolio" class="btn btn--gold">View Work <i class="fa-solid fa-arrow-right" /></a>
@@ -540,7 +540,15 @@ const EDUCATION = [
     bullets: ['Frontend stack: HTML, CSS, SCSS, JS, jQuery', 'WordPress & Elementor project work']
   },
   {
-    period: '2009 — 2011', tag: 'Intermediate', role: 'Intermediate ', company: 'BISE Faisalabad',
+    period: '2014 — 2016',
+    tag: 'Graduation',
+    role: 'Bachelor of Commerce (B.Com)',
+    company: 'University of the Punjab',
+    desc: 'Bachelor of Commerce (B.Com) from the University of the Punjab, with a strong foundation in accounting, commerce, business, and financial management.',
+    bullets: ['University of the Punjab — B.Com', 'Foundation in accounting, commerce & business']
+  },
+  {
+    period: '2009 — 2011', tag: 'Intermediate', role: ' Commerce (I.Com) ', company: 'BISE Faisalabad',
     desc: 'Intermediate education from the Board of Intermediate & Secondary Education, Faisalabad — laying the groundwork for higher studies.',
     bullets: ['BISE Faisalabad — Intermediate', 'Foundation in mathematics & science']
   },
