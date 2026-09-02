@@ -56,8 +56,8 @@
             <a href="#contact" class="btn btn--ghost">Start a Project</a>
           </div>
           <div class="hero__stats">
-            <div><strong>3+</strong><span>Years of Experience</span></div>
-            <div><strong>70+</strong><span>Projects Delivered</span></div>
+            <div><strong>4+</strong><span>Years of Experience</span></div>
+            <div><strong>100+</strong><span>Projects Delivered</span></div>
             <div><strong>100%</strong><span>Quality Work</span></div>
           </div>
         </div>
@@ -119,7 +119,7 @@
           <p>
             I’m Ghulam Meer Jilani, a Shopify, WordPress & Frontend Developer focused on building high-performing, conversion-focused eCommerce stores and custom web experiences.
 
-            With 3+ years of hands-on experience, I help brands turn ideas and designs into fast, responsive, and user-friendly websites that look great and are built to perform.
+            With 4+ years of hands-on experience, I help brands turn ideas and designs into fast, responsive, and user-friendly websites that look great and are built to perform.
           </p>
           <ul class="about__list">
             <li><i class="fa-solid fa-check" /> Shopify Liquid &amp; Custom 2.0 sections</li>
